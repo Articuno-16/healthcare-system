@@ -1,10 +1,10 @@
-
-import Header from './pages/Header';
+import {DefaultLayout} from './components/layout'
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
+      <DefaultLayout />
     </div>
   );
 }

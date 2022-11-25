@@ -1,6 +1,8 @@
 @import url('normalize.css');
 
-// :root{}
+:root{
+   --charcoal : #1f1f1f;
+}
 
 * {
     box-sizing: border-box !important;
@@ -10,8 +12,16 @@
     outline: none !important;
 }
 
-.text-deco-none {   
-    text-decoration: none !important;
+.main-width {
+    width: 84% ;
+}
+
+footer {
+    background-color: var(--charcoal);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 // html {

@@ -5,8 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 
-import Home from './Home';
-import Contact from './Contact';
+import { PulicRoutes } from '../../../../routes/Route';
 
 const textNonUnderline = { 
     color: 'inherit', 
@@ -17,7 +16,7 @@ export default function Header() {
     return (
         <>
             <Navbar expand="lg" className='p-3' style={{boxShadow: '0px 0px 20px 1px lightgrey'}}>
-            <Container>
+            <Container className='main-width'>
                 <Navbar.Brand>
                     <Link style={textNonUnderline} to="/">DOCMED</Link>
                 </Navbar.Brand>
@@ -44,8 +43,12 @@ export default function Header() {
             </Navbar>
 
             <Routes>
-                <Route path='/' element={<Home />}></Route>
-                <Route path='/contact' element={<Contact />}></Route>
+                {
+                    PulicRoutes.map((route, i) => {
+                        let Page = route.element;
+                        return <Route path={route.path} element={<Page/>} key={i} />
+                    })
+                }
             </Routes>
         </>
         
