@@ -1,5 +1,7 @@
 import Home from "../pages/Home"
 import Contact from "../pages/Contact"
+import Department from "../pages/Department"
+import Blog from "../pages/Blog"
 
 export const PulicRoutes = [
     {
@@ -9,6 +11,14 @@ export const PulicRoutes = [
     {
         path: '/contact',
         element: Contact
+    },
+    {
+        path: '/department',
+        element: Department
+    },
+    {
+        path: '/blog',
+        element: Blog
     }
 ]
 
