@@ -1,5 +1,5 @@
 //images
-import banner2 from '../assets/images/banner2.png';
+
 import welcome1 from '../assets/images/welcome1.png';
 import welcome2 from '../assets/images/welcome2.png';
 import dpm1 from '../assets/images/dpm1.png';
@@ -8,7 +8,6 @@ import dpm3 from '../assets/images/dpm3.png';
 import dpm4 from '../assets/images/dpm4.png';
 import dpm5 from '../assets/images/dpm5.png';
 import dpm6 from '../assets/images/dpm6.png';
-import banner from '../assets/images/banner.png';
 import testmonial1 from '../assets/images/testmonial1.png';
 import testmonial2 from '../assets/images/testmonial2.png';
 
@@ -19,6 +18,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+
 // component
 import HomeSlick from '../components/section/homeSlickSlider';
 
@@ -32,63 +32,16 @@ import {FaMedkit} from 'react-icons/fa';
 import {FaCheck} from 'react-icons/fa';
 import {FaQuoteLeft} from 'react-icons/fa';
 import {FaQuoteRight} from 'react-icons/fa';
-const Home = () => {
+const Department = () => {
     return (
-        <div class="home">
-          <div className='item-center'>
-        <Carousel>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={banner2}
-          alt="First slide"
-        />
-        <Carousel.Caption style={{textAlign: 'left', color: 'black'}}>
-          <h2><strong>Health Care</strong></h2>
-          <h3>For Hole Family</h3>
-          <p>In healthcare sector, service excellence is the facility of<br />
-          the hospital as healthcare service provider to consistently.
-           </p>
-           <a href="/serviecs" class="btn btn-primary">Check Our Services</a>
-         
-        </Carousel.Caption>
+        <div class="department">
+          <div className='banner-department'>
+        <h2>Services</h2>
+        <p>
+        <a style={{color: 'white', textDecoration: 'none'}} href="/home">Home</a>
+        / Serviecs
+        </p>
        
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={banner}
-          alt="Second slide"
-        />
-
-       <Carousel.Caption style={{textAlign: 'left', color: 'black'}}>
-          <h2><strong>Health Care</strong></h2>
-          <h3>For Hole Family</h3>
-          <p>In healthcare sector, service excellence is the facility of<br />
-          the hospital as healthcare service provider to consistently.
-           </p>
-           <a href="/serviecs" class="btn btn-primary">Check Our Services</a>
-         
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={banner2}
-          alt="Third slide"
-        />
-
-       <Carousel.Caption style={{textAlign: 'left', color: 'black'}}>
-          <h2><strong>Health Care</strong></h2>
-          <h3>For Hole Family</h3>
-          <p>In healthcare sector, service excellence is the facility of<br />
-          the hospital as healthcare service provider to consistently.
-           </p>
-           <a href="/serviecs" class="btn btn-primary">Check Our Services</a>
-         
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
     </div>
     <div className='area-services' style={{background: '#83C4FF'}}>
     <Container style={{margin: '0 auto', color: 'white'}}>
@@ -374,4 +327,4 @@ const Home = () => {
     </div>
     );
 }
-export default Home
+export default Department
