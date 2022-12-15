@@ -34,7 +34,7 @@ import {FaQuoteLeft} from 'react-icons/fa';
 import {FaQuoteRight} from 'react-icons/fa';
 const Department = () => {
     return (
-        <div class="department">
+        <div className="department">
           <div className='banner-department'>
         <h2>Services</h2>
         <p>
@@ -51,7 +51,7 @@ const Department = () => {
             <FaHospitalAlt style={{height: '50px', width: '50px'}}></FaHospitalAlt>
           <h2>Hospitality</h2>
           <p>Clinical excellence must be the priority for any health care service provider.</p>
-          <a href='/applybed' class="btn btn-83C4FF border-white text-white">Apply For A Bed</a>
+          <a href='/applybed' className="btn btn-83C4FF border-white text-white">Apply For A Bed</a>
           </div>
             </Col>
           
@@ -60,7 +60,7 @@ const Department = () => {
             <FaPhone style={{height: '50px', width: '50px'}}></FaPhone>
             <h2>Emergency Care</h2>
             <p>Clinical excellence must be the priority for any health care service provider.</p>
-            <a href='/contact' class="btn btn-83C4FF border-white text-white">+84 366 306 060</a>
+            <a href='/contact' className="btn btn-83C4FF border-white text-white">+84 366 306 060</a>
             </div>
             </Col>
         
@@ -69,7 +69,7 @@ const Department = () => {
             <FaMedkit style={{height: '50px', width: '50px'}}></FaMedkit>
             <h2>Chamber Service</h2>
             <p>Clinical excellence must be the priority for any health care service provider.</p>
-            <a href='/makeappointment' class="btn btn-83C4FF border-white text-white">Make An Appointment</a>
+            <a href='/makeappointment' className="btn btn-83C4FF border-white text-white">Make An Appointment</a>
             </div>
             </Col>
         </Row>
@@ -299,7 +299,7 @@ const Department = () => {
               <p>Esteem spirit temper too say adieus.</p>
               </Col>
               <Col>
-              <a href='/contact' class="btn btn-83C4FF border-white text-white">+84 366 306 060</a>
+              <a href='/contact' className="btn btn-83C4FF border-white text-white">+84 366 306 060</a>
               </Col>
             </Row>
            
@@ -315,7 +315,7 @@ const Department = () => {
               <p>Esteem spirit temper too say adieus.</p>
               </Col>
               <Col>
-              <a href='/contact' class="btn btn-83C4FF border-white text-white">Make An Appointment</a>
+              <a href='/contact' className="btn btn-83C4FF border-white text-white">Make An Appointment</a>
               </Col>
             </Row>
            

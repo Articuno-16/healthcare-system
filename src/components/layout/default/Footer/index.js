@@ -1,5 +1,4 @@
 import { Container, Row, Col } from "react-bootstrap";
-// import Row from "react-bootstrap";
 
 export default function Footer() {
   return (
