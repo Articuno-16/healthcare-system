@@ -172,9 +172,9 @@ const Home = () => {
           <h2 className='py-3'>Our Departments</h2>
           <p>Esteem spirit temper too say adieus who direct esteem.It esteems luckily or picture placing drawing.</p>
         </div>
-        <Row style={{margin: '0 90px'}}>
-          <Col>
-          <Card className='eye-care' style={{ width: '18rem', margin: '10px 0'}}>
+        <Row>
+          <Col xs={12} md={6} lg={4} className='py-md-3 py-2'>
+          <Card className='eye-care'>
       <Card.Img variant="top" src={dpm1} />
       <Card.Body>
         <Card.Title><a style={{color: 'black', textDecoration: 'none'}} href="/eyecare">Eye Care</a></Card.Title>
@@ -185,8 +185,8 @@ const Home = () => {
       </Card.Body>
     </Card>
           </Col>
-          <Col>
-          <Card className='physical-therapy' style={{ width: '18rem', margin: '10px 0'}}>
+          <Col xs={12} md={6} lg={4} className='py-md-3 py-2'>
+          <Card className='physical-therapy'>
       <Card.Img variant="top" src={dpm2} />
       <Card.Body>
         <Card.Title><a style={{color: 'black', textDecoration: 'none'}} href="/physicaltherapy">Physical Therapy</a></Card.Title>
@@ -197,8 +197,8 @@ const Home = () => {
       </Card.Body>
     </Card>
           </Col>
-          <Col>
-          <Card className='dental-care' style={{ width: '18rem' , margin: '10px 0'}}>
+          <Col xs={12} md={6} lg={4} className='py-md-3 py-2'>
+          <Card className='dental-care' >
       <Card.Img variant="top" src={dpm3} />
       <Card.Body>
         <Card.Title><a style={{color: 'black', textDecoration: 'none'}} href="/dentalcare">Dental Care</a></Card.Title>
@@ -210,8 +210,8 @@ const Home = () => {
     </Card>
           </Col>
         
-          <Col>
-          <Card className='diagnostic-dest' style={{ width: '18rem' , margin: '10px 0'}}>
+          <Col xs={12} md={6} lg={4} className='py-md-3 py-2'>
+          <Card className='diagnostic-dest' >
       <Card.Img variant="top" src={dpm4} />
       <Card.Body>
         <Card.Title><a style={{color: 'black', textDecoration: 'none'}} href="/diagnostic-dest">Diagnostic Test</a></Card.Title>
@@ -222,8 +222,8 @@ const Home = () => {
       </Card.Body>
     </Card>
           </Col>
-          <Col>
-          <Card className='skin-surgery' style={{ width: '18rem' , margin: '10px 0'}}>
+          <Col xs={12} md={6} lg={4} className='py-md-3 py-2'>
+          <Card className='skin-surgery' >
       <Card.Img variant="top" src={dpm5} />
       <Card.Body>
         <Card.Title><a style={{color: 'black', textDecoration: 'none'}} href="/skin-surgery">Skin Surgery</a></Card.Title>
@@ -234,8 +234,8 @@ const Home = () => {
       </Card.Body>
     </Card>
           </Col>
-          <Col>
-          <Card className='surgery-service' style={{ width: '18rem' , margin: '10px 0'}}>
+          <Col xs={12} md={6} lg={4} className='py-md-3 py-2'>
+          <Card className='surgery-service' >
       <Card.Img variant="top" src={dpm6} />
       <Card.Body>
         <Card.Title><a style={{color: 'black', textDecoration: 'none'}} href="/surgery-service">Surgery Service</a></Card.Title>
@@ -275,11 +275,7 @@ const Home = () => {
        
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={testmonial2}
-          alt="Second slide"
-        />
+        <img className="d-block w-100" src={testmonial2} alt="Second slide" />
 
 <Carousel.Caption style={{textAlign: 'center', color: 'white', top: '50%'}}>
           

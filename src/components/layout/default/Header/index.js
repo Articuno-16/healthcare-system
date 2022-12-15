@@ -26,7 +26,7 @@ export default function Header() {
 
     return (
         <>
-            <Navbar bg="light" expand="lg" style={{ boxShadow: '0px 0px 20px 1px lightgrey' }}>
+            <Navbar bg="light" expand="lg" style={{ boxShadow: '0px 0px 5px 1px lightgray' }}>
                 <Container>
                     <Navbar.Brand>
                         <Link style={textNonUnderline} to="/">
