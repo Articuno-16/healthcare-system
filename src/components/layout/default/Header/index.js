@@ -24,6 +24,14 @@ export default function Header() {
         setUser(user);
     }, []);
 
+    const handleLogout = () => {
+        localStorage.removeItem('email');
+        localStorage.removeItem('username');
+        localStorage.removeItem('id');
+        localStorage.clear();
+        window.location.reload();
+    };
+
     return (
         <>
             <Navbar bg="light" expand="lg" style={{ boxShadow: '0px 0px 5px 1px lightgray' }}>
@@ -75,7 +83,8 @@ export default function Header() {
                                             <p>{user}</p>
                                         </Link>
                                     </Button>
-                                    {!user && <Link to="/login">Login</Link>}
+                                    {!user &&  <Link style={textNonUnderline} to='/login'>Login</Link>}
+                                    {user && <Link style={textNonUnderline} to='' onClick={handleLogout}>Logout</Link>}
                                 </Nav>
                             </Nav>
                         </Navbar.Collapse>
