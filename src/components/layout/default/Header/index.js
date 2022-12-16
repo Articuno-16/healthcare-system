@@ -64,9 +64,11 @@ const logOut = () =>{
                         <div className='btn btn-light'>
                         <FaUser></FaUser>
                        <p>{user}</p> 
+                       {!user &&  <Link style={textNonUnderline} to='/login'>Login</Link>}
+                        {user && <Link style={textNonUnderline} to='' onClick={logOut}>Logout</Link>}
                         </div>
                         </Button>
-                        <Link to='/login'>Login</Link> / <Link to='' onClick={logOut}>Logout</Link>
+                        
                 </Nav.Link>
             </Container>
             </Navbar>
