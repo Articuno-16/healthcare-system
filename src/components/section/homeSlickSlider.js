@@ -49,56 +49,56 @@ export default class HomeSlick extends Component {
         <Slider {...settings}>
           <div className="img-customize">
             <img src={expert1} alt="expert1"></img>
-            <div className="expert-info">
+            <div className="expert-info text-center p-2">
                 <h2>Mirazul Alom</h2>
                 <p>Nuerologist</p>
             </div>
           </div>
           <div className="img-customize">
           <img src={expert2} alt="expert2"></img>
-          <div className="expert-info">
+          <div className="expert-info text-center p-3">
                 <h2>Mirazul Alom</h2>
                 <p>Nuerologist</p>
             </div>
           </div>
           <div className="img-customize">
           <img src={expert3} alt="expert3"></img>
-          <div className="expert-info">
+          <div className="expert-info text-center p-3">
                 <h2>Mirazul Alom</h2>
                 <p>Nuerologist</p>
             </div>
           </div>
           <div className="img-customize">
           <img src={expert4} alt="expert4"></img>
-          <div className="expert-info">
+          <div className="expert-info text-center p-3">
                 <h2>Mirazul Alom</h2>
                 <p>Nuerologist</p>
             </div>
           </div>
           <div className="img-customize">
           <img src={expert1} alt="expert5"></img>
-          <div className="expert-info">
+          <div className="expert-info text-center p-3">
                 <h2>Mirazul Alom</h2>
                 <p>Nuerologist</p>
             </div>
           </div>
           <div className="img-customize">
           <img src={expert2} alt="expert6"></img>
-          <div className="expert-info">
+          <div className="expert-info text-center p-3">
                 <h2>Mirazul Alom</h2>
                 <p>Nuerologist</p>
             </div>
           </div>
           <div className="img-customize">
           <img src={expert3} alt="expert7"></img>
-          <div className="expert-info">
+          <div className="expert-info text-center p-3">
                 <h2>Mirazul Alom</h2>
                 <p>Nuerologist</p>
             </div>
           </div>
           <div className="img-customize">
           <img src={expert4} alt="expert8"></img>
-          <div className="expert-info">
+          <div className="expert-info text-center p-3">
                 <h2>Mirazul Alom</h2>
                 <p>Nuerologist</p>
             </div>

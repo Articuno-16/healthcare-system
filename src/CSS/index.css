@@ -1,3 +1,5 @@
+@import url('./GlobalStyles.scss');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Open Sans', 'Roboto', 'Oxygen',

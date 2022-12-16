@@ -7,6 +7,9 @@ import Doctors from "../pages/Doctors"
 import Register from "../pages/Register"
 import Pages from "../pages/Pages"
 import Create from "../pages/Create"
+import Account from "../pages/Account"
+import Schedule from "../pages/Schedule"
+
 
 export const PulicRoutes = [
     {
@@ -41,12 +44,28 @@ export const PulicRoutes = [
         path: '/register',
         element: Register
     },
-{
-    path: '/create',
-    element: Create
-}
+    {
+        path: '/account',
+        element: Account
+    },
+    {
+        path: '/schedule',
+        element: Schedule
+    },
+    {
+        path: '/create',
+        element: Create
+    }
 ]
 
 export const PrivateRoutes = [
     // for private function
+    {
+        path: '/account',
+        element: Account
+    },
+    {
+        path: '/schedule',
+        element: Schedule
+    }
 ]

@@ -34,7 +34,7 @@ import {FaQuoteLeft} from 'react-icons/fa';
 import {FaQuoteRight} from 'react-icons/fa';
 const Home = () => {
     return (
-        <div class="home">
+        <div className="home">
           <div className='item-center'>
         <Carousel>
       <Carousel.Item>
@@ -44,12 +44,11 @@ const Home = () => {
           alt="First slide"
         />
         <Carousel.Caption style={{textAlign: 'left', color: 'black'}}>
-          <h2><strong>Health Care</strong></h2>
+          <h1>Health Care</h1>
           <h3>For Hole Family</h3>
-          <p>In healthcare sector, service excellence is the facility of<br />
-          the hospital as healthcare service provider to consistently.
+          <p className='w-50'>In healthcare sector, service excellence is the facility of the hospital as healthcare service provider to consistently.
            </p>
-           <a href="/serviecs" class="btn btn-primary">Check Our Services</a>
+           <a href="/serviecs" className="btn btn-primary">Check Our Services</a>
          
         </Carousel.Caption>
        
@@ -62,12 +61,11 @@ const Home = () => {
         />
 
        <Carousel.Caption style={{textAlign: 'left', color: 'black'}}>
-          <h2><strong>Health Care</strong></h2>
+          <h1>Health Care</h1>
           <h3>For Hole Family</h3>
-          <p>In healthcare sector, service excellence is the facility of<br />
-          the hospital as healthcare service provider to consistently.
+          <p className='w-50'>In healthcare sector, service excellence is the facility of the hospital as healthcare service provider to consistently.
            </p>
-           <a href="/serviecs" class="btn btn-primary">Check Our Services</a>
+           <a href="/serviecs" className="btn btn-primary">Check Our Services</a>
          
         </Carousel.Caption>
       </Carousel.Item>
@@ -79,12 +77,11 @@ const Home = () => {
         />
 
        <Carousel.Caption style={{textAlign: 'left', color: 'black'}}>
-          <h2><strong>Health Care</strong></h2>
+          <h1>Health Care</h1>
           <h3>For Hole Family</h3>
-          <p>In healthcare sector, service excellence is the facility of<br />
-          the hospital as healthcare service provider to consistently.
+          <p className='w-50'>In healthcare sector, service excellence is the facility of the hospital as healthcare service provider to consistently.
            </p>
-           <a href="/serviecs" class="btn btn-primary">Check Our Services</a>
+           <a href="/serviecs" className="btn btn-primary">Check Our Services</a>
          
         </Carousel.Caption>
       </Carousel.Item>
@@ -94,29 +91,37 @@ const Home = () => {
     <Container style={{margin: '0 auto', color: 'white'}}>
         <Row >
             <Col>
-           <div className='single service-1'>
-            <FaHospitalAlt style={{height: '50px', width: '50px'}}></FaHospitalAlt>
-          <h2>Hospitality</h2>
-          <p>Clinical excellence must be the priority for any health care service provider.</p>
-          <a href='/applybed' class="btn btn-83C4FF border-white text-white">Apply For A Bed</a>
+           <div className='p-4 service-1'>
+            <div className='mb-3'>
+              <FaHospitalAlt style={{height: '50px', width: '50px'}}></FaHospitalAlt>
+            </div>
+          <div>
+            <h2>Hospitality</h2>
+            <p>Clinical excellence must be the priority for any health care service provider.</p>
+          </div>
+          <a href='/applybed' className="btn btn-83C4FF border-white text-white">Apply For A Bed</a>
           </div>
             </Col>
           
             <Col style={{background: '#5DB2FF'}}>
-            <div className='single service-2'>
-            <FaPhone style={{height: '50px', width: '50px'}}></FaPhone>
-            <h2>Emergency Care</h2>
-            <p>Clinical excellence must be the priority for any health care service provider.</p>
-            <a href='/contact' class="btn btn-83C4FF border-white text-white">+84 366 306 060</a>
+            <div className='p-4 service-2'>
+            <div className='mb-3'><FaPhone style={{height: '50px', width: '50px'}}></FaPhone></div>
+            <div>
+              <h2>Emergency Care</h2>
+              <p>Clinical excellence must be the priority for any health care service provider.</p>
+            </div>
+            <a href='/contact' className="btn btn-83C4FF border-white text-white">+84 366 306 060</a>
             </div>
             </Col>
         
             <Col>
-            <div className='single service-3'>
-            <FaMedkit style={{height: '50px', width: '50px'}}></FaMedkit>
-            <h2>Chamber Service</h2>
-            <p>Clinical excellence must be the priority for any health care service provider.</p>
-            <a href='/makeappointment' class="btn btn-83C4FF border-white text-white">Make An Appointment</a>
+            <div className='p-4 service-3'>
+            <div className='mb-3'><FaMedkit style={{height: '50px', width: '50px'}}></FaMedkit></div >
+            <div>
+              <h2>Chamber Service</h2>
+              <p>Clinical excellence must be the priority for any health care service provider.</p>
+            </div>
+            <a href='/makeappointment' className="btn btn-83C4FF border-white text-white">Make An Appointment</a>
             </div>
             </Col>
         </Row>
@@ -130,14 +135,14 @@ const Home = () => {
           <div className="thumb-image-1">
             <img className='image-1' src={welcome1} alt='welcome-img-1'></img>
           </div>
-            <div className='thumb-image-2'>
-            <img className='image-2' src={welcome2} alt='welcome-img-2'></img>
+          <div className='thumb-image-2 d-none d-lg-block'>
+            <img className='image-2' src={welcome2} alt='welcome-img-2' />
           </div>
           </div>
           </Col>
 
           <Col>
-          <div className='welcome-content'>
+          <div className='welcome-content py-3'>
             <h2>Welcome to Docmed</h2>
             <h3>Best Care For Your Good Health</h3>
             <p>Esteem spirit temper too say adieus who direct esteem. It esteems luckily or picture placing drawing. Apartments frequently or motionless on reasonable projecting expression.</p>
@@ -155,7 +160,7 @@ const Home = () => {
                 Voluptatem quia voluptas sit aspernatur.
               </li>
             </ul>
-            <button className='btn btn-white border-primary text-primary'>Learn More</button>
+            <button className='btn btn-outline-primary'>Learn More</button>
             </div>
           </Col>
         </Row>
@@ -163,13 +168,13 @@ const Home = () => {
     </div>
     <div className='our-department-area'>
       <Container>
-        <div className='department-intro'>
-        <h2>Our Departments</h2>
-        <p>Esteem spirit temper too say adieus who direct esteem.It esteems luckily or picture placing drawing.</p>
+        <div className='text-center w-50 m-auto'>
+          <h2 className='py-3'>Our Departments</h2>
+          <p>Esteem spirit temper too say adieus who direct esteem.It esteems luckily or picture placing drawing.</p>
         </div>
-        <Row style={{margin: '0 90px'}}>
-          <Col>
-          <Card className='eye-care' style={{ width: '18rem', margin: '10px 0'}}>
+        <Row>
+          <Col xs={12} md={6} lg={4} className='py-md-3 py-2'>
+          <Card className='eye-care'>
       <Card.Img variant="top" src={dpm1} />
       <Card.Body>
         <Card.Title><a style={{color: 'black', textDecoration: 'none'}} href="/eyecare">Eye Care</a></Card.Title>
@@ -180,8 +185,8 @@ const Home = () => {
       </Card.Body>
     </Card>
           </Col>
-          <Col>
-          <Card className='physical-therapy' style={{ width: '18rem', margin: '10px 0'}}>
+          <Col xs={12} md={6} lg={4} className='py-md-3 py-2'>
+          <Card className='physical-therapy'>
       <Card.Img variant="top" src={dpm2} />
       <Card.Body>
         <Card.Title><a style={{color: 'black', textDecoration: 'none'}} href="/physicaltherapy">Physical Therapy</a></Card.Title>
@@ -192,8 +197,8 @@ const Home = () => {
       </Card.Body>
     </Card>
           </Col>
-          <Col>
-          <Card className='dental-care' style={{ width: '18rem' , margin: '10px 0'}}>
+          <Col xs={12} md={6} lg={4} className='py-md-3 py-2'>
+          <Card className='dental-care' >
       <Card.Img variant="top" src={dpm3} />
       <Card.Body>
         <Card.Title><a style={{color: 'black', textDecoration: 'none'}} href="/dentalcare">Dental Care</a></Card.Title>
@@ -205,8 +210,8 @@ const Home = () => {
     </Card>
           </Col>
         
-          <Col>
-          <Card className='diagnostic-dest' style={{ width: '18rem' , margin: '10px 0'}}>
+          <Col xs={12} md={6} lg={4} className='py-md-3 py-2'>
+          <Card className='diagnostic-dest' >
       <Card.Img variant="top" src={dpm4} />
       <Card.Body>
         <Card.Title><a style={{color: 'black', textDecoration: 'none'}} href="/diagnostic-dest">Diagnostic Test</a></Card.Title>
@@ -217,8 +222,8 @@ const Home = () => {
       </Card.Body>
     </Card>
           </Col>
-          <Col>
-          <Card className='skin-surgery' style={{ width: '18rem' , margin: '10px 0'}}>
+          <Col xs={12} md={6} lg={4} className='py-md-3 py-2'>
+          <Card className='skin-surgery' >
       <Card.Img variant="top" src={dpm5} />
       <Card.Body>
         <Card.Title><a style={{color: 'black', textDecoration: 'none'}} href="/skin-surgery">Skin Surgery</a></Card.Title>
@@ -229,8 +234,8 @@ const Home = () => {
       </Card.Body>
     </Card>
           </Col>
-          <Col>
-          <Card className='surgery-service' style={{ width: '18rem' , margin: '10px 0'}}>
+          <Col xs={12} md={6} lg={4} className='py-md-3 py-2'>
+          <Card className='surgery-service' >
       <Card.Img variant="top" src={dpm6} />
       <Card.Body>
         <Card.Title><a style={{color: 'black', textDecoration: 'none'}} href="/surgery-service">Surgery Service</a></Card.Title>
@@ -270,11 +275,7 @@ const Home = () => {
        
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={testmonial2}
-          alt="Second slide"
-        />
+        <img className="d-block w-100" src={testmonial2} alt="Second slide" />
 
 <Carousel.Caption style={{textAlign: 'center', color: 'white', top: '50%'}}>
           
@@ -333,20 +334,20 @@ const Home = () => {
     </Tabs>
     </div>
     <div className='experts-area'>
-    <HomeSlick></HomeSlick>
+    <HomeSlick />
     </div>
     <div className='emergency-area'>
       <Container>
         <Row>
-          <Col className='emergency-col-1'>
+          <Col className='emergency-col-1' xs={12} md={6}>
           <div className='emergency-contact'>
             <Row>
              <Col>
              <h2 style={{fontSize: '20px'}}>For Any Emergency Contact</h2>
               <p>Esteem spirit temper too say adieus.</p>
               </Col>
-              <Col>
-              <a href='/contact' class="btn btn-83C4FF border-white text-white">+84 366 306 060</a>
+              <Col className='d-flex align-items-center'>
+                <a href='/contact' className="btn btn-83C4FF border-white text-white">+84 366 306 060</a>
               </Col>
             </Row>
            
@@ -354,15 +355,15 @@ const Home = () => {
         
           </Col>
 
-          <Col className='emergency-col-2'>
+          <Col className='emergency-col-2' xs={12} md={6}>
           <div className='emergency-appointment'>
             <Row>
              <Col>
              <h2 style={{fontSize: '20px'}}>Make an Online Appointment</h2>
               <p>Esteem spirit temper too say adieus.</p>
               </Col>
-              <Col>
-              <a href='/contact' class="btn btn-83C4FF border-white text-white">Make An Appointment</a>
+              <Col className='d-flex align-items-center'>
+              <a href='/contact' className="btn btn-83C4FF border-white text-white">Make An Appointment</a>
               </Col>
             </Row>
            
