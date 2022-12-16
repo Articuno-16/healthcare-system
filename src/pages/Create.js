@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import axios from 'axios';
 
 export default function Create() {
-    const [info, setInfo] = useState({});
     const [schedule, setSchedule] = useState({});
     const id = localStorage.getItem('id');
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
-        // event.preventDefault();
-        // console.log(schedule);
-        // const url = `http://localhost/api/getSchedule/?id=${id}`;
-        // axios.put(url, info);
+        event.preventDefault();
+        console.log(schedule);
+        const url = `http://localhost/api/getSchedule/?id=${id}`;
+        axios.post(url, schedule);
         alert('Your schedule has been updated!');
+        navigate('/schedule');
     };
 
     const handleChange = (event) => {
@@ -22,16 +23,6 @@ export default function Create() {
             [event.target.name]: event.target.value,
         }));
     };
-
-    useEffect(() => {
-        if (id) {
-            console.log(id);
-            const url = `http://localhost/api/getUser/?id=${id}`;
-            axios.get(url).then((res) => {
-                if (res.data) setInfo(res.data[0]);
-            });
-        }
-    }, [id]);
 
     return (
         <Container className="m-auto py-5">
@@ -48,7 +39,7 @@ export default function Create() {
                             type="text"
                             name="firstname"
                             onChange={handleChange}
-                            value={info.firstname ?? ''}
+                            // value={info.firstname ?? ''}
                         />
                     </Form.Group>
                     <Form.Group className="mb-3 col-md-6">
@@ -57,7 +48,7 @@ export default function Create() {
                             type="text"
                             name="lastname"
                             onChange={handleChange}
-                            value={info.lastname ?? ''}
+                            // value={info.lastname ?? ''}
                         />
                     </Form.Group>
                 </div>
@@ -68,7 +59,7 @@ export default function Create() {
                             type="email"
                             name="email"
                             onChange={handleChange}
-                            value={info.email ?? ''}
+                            // value={info.email ?? ''}
                         />
                     </Form.Group>
                     <Form.Group className="mb-3 col-md-6">
@@ -77,7 +68,7 @@ export default function Create() {
                             type="text"
                             name="phone_number"
                             onChange={handleChange}
-                            value={info.phone_number ?? ''}
+                            // value={info.phone_number ?? ''}
                         />
                     </Form.Group>
                 </div>
@@ -85,7 +76,7 @@ export default function Create() {
                     <Form.Group className="mb-3 col-md-6">
                         <Form.Label>Gender</Form.Label>
                         <Form.Select>
-                            <option value={info.gender}>{info.gender}</option>
+                            {/* <option value={info.gender}>{info.gender}</option> */}
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                             <option value="other">Orther</option>
@@ -97,7 +88,7 @@ export default function Create() {
                             type="date"
                             name="birthday"
                             onChange={handleChange}
-                            value={info.birthday ?? ''}
+                            // value={info.birthday ?? ''}
                         />
                     </Form.Group>
                     <Form.Group className="mb-3 col-6 col-md-3">
@@ -106,7 +97,7 @@ export default function Create() {
                             type="text"
                             name="cId"
                             onChange={handleChange}
-                            value={info.cId ?? ''}
+                            // value={info.cId ?? ''}
                             disabled
                         />
                     </Form.Group>
@@ -118,7 +109,7 @@ export default function Create() {
                             type="text"
                             name="address"
                             onChange={handleChange}
-                            value={info.address ?? ''}
+                            // value={info.address ?? ''}
                         />
                     </Form.Group>
                 </div>

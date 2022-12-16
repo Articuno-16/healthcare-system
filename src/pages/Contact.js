@@ -1,3 +1,5 @@
+import {Button} from 'react-bootstrap'
+
 const Contact = () => {
     return (
       <div className="container py-5">
@@ -5,13 +7,13 @@ const Contact = () => {
           <div className="col-12">
             <h2 className="contact-title">Get in Touch</h2>
           </div>
-          <div className="col-lg-8">
+          <div className="col-lg-8 py-3">
             <form
               className="form-contact contact_form"
               action="contact_process.php"
               method="post"
               id="contactForm"
-              novalidate="novalidate"
+              noValidate="novalidate"
             >
               <div className="row">
                 <div className="col-12 my-2">
@@ -22,8 +24,8 @@ const Contact = () => {
                       id="message"
                       cols="30"
                       rows="9"
-                      onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Enter Message'"
+                      onFocus="this.placeholder = ''"
+                      onBlur="this.placeholder = 'Enter Message'"
                       placeholder=" Name"
                     ></textarea>
                   </div>
@@ -36,7 +38,7 @@ const Contact = () => {
                       id="name"
                       type="text"
                       onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Enter your name'"
+                      onBlur="this.placeholder = 'Enter your name'"
                       placeholder="Enter your name"
                     ></input>
                   </div>
@@ -49,7 +51,7 @@ const Contact = () => {
                       id="email"
                       type="email"
                       onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Enter email address'"
+                      onBlur="this.placeholder = 'Enter email address'"
                       placeholder="Email"
                     ></input>
                   </div>
@@ -62,20 +64,20 @@ const Contact = () => {
                       id="subject"
                       type="text"
                       onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Enter Subject'"
+                      onBlur="this.placeholder = 'Enter Subject'"
                       placeholder="Enter Subject"
                     ></input>
                   </div>
                 </div>
               </div>
               <div className="form-group mt-3">
-                <button type="submit" className="button button-contactForm boxed-btn">
+                <Button type="submit" variant="outline-dark">
                   Send
-                </button>
+                </Button>
               </div>
             </form>
           </div>
-          <div className="col-lg-3 offset-lg-1">
+          <div className="col-lg-3 offset-lg-1 text-center py-3">
             <div className="media contact-info">
               <span className="contact-info__icon">
                 <i className="ti-home"></i>
