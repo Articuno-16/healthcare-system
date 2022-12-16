@@ -14,47 +14,47 @@ import Schedule from "../pages/Schedule"
 export const PulicRoutes = [
     {
         path: '/',
-        element: Home
+        element: <Home />
     },
     {
         path: '/contact',
-        element: Contact
+        element: <Contact />
     },
     {
         path: '/department',
-        element: Department
+        element: <Department />
     },
     {
         path: '/blog',
-        element: Blog
+        element: <Blog/>
     },
     {
         path: '/doctors',
-        element: Doctors
+        element: <Doctors />
     },
     {
         path: '/pages',
-        element: Pages
+        element: <Pages />
     },
     {
         path: '/login',
-        element: Login
+        element: <Login />
     },
     {
         path: '/register',
-        element: Register
+        element: <Register />
     },
     {
         path: '/account',
-        element: Account
+        element: <Account />
     },
     {
         path: '/schedule',
-        element: Schedule
+        element: <Schedule />
     },
     {
         path: '/create',
-        element: Create
+        element: <Create />
     }
 ]
 
@@ -62,10 +62,10 @@ export const PrivateRoutes = [
     // for private function
     {
         path: '/account',
-        element: Account
+        element: <Account />
     },
     {
         path: '/schedule',
-        element: Schedule
+        element: <Schedule />
     }
 ]

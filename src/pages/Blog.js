@@ -33,7 +33,7 @@ import post10 from '../assets/images/post_10.png'
 
 const Blog = () => {
     return (
-        <div class="blog">
+        <div className="blog">
         <div className='banner-blog'>
         <h2>Blog</h2>
         <p>

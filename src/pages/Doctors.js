@@ -1,8 +1,8 @@
 const Doctors = () => {
     return (
-      <div className="container">
+      <div className="container py-5">
         <h1 className="text-center">Expert Doctors</h1>
-        <div className="row">
+        <div className="row py-3">
           <div className="col-md-6 col-lg-3 my-3">
             <div className="card">
               <img src={require("../assets/images/11.png")} className="card-img-top" alt="..."></img>

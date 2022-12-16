@@ -85,9 +85,7 @@ export default function Header() {
             <Routes>
                 {PulicRoutes.map((route, i) => {
                     let Page = route.element;
-                    return (
-                        <Route path={route.path} element={<Page />} key={i} />
-                    );
+                    return <Route path={route.path} element={Page} key={i} />;
                 })}
             </Routes>
         </>
