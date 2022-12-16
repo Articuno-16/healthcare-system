@@ -39,7 +39,7 @@ handleSubmit(event) {
 
   axios({
       method: 'post',
-      url: 'http://localhost/healthcarePHP/insertUser.php',
+      url: 'http://localhost/api/register/',
       data: formData,
       config: { headers: {'Content-Type': 'multipart/form-data' }}
   })
@@ -60,7 +60,7 @@ handleSubmit(event) {
 render() {
   return (
    
-        <Card style={{width: '50%', margin: '50px auto'}} className="text-center">
+        <Card style={{margin: '50px auto'}} className="text-center w-50">
         <Card.Header><h3>Register</h3></Card.Header>
         <Card.Body>
         <Form onSubmit={this.handleSubmit}>

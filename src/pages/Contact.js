@@ -1,6 +1,6 @@
 const Contact = () => {
     return (
-      <div className="container">
+      <div className="container py-5">
         <div className="row">
           <div className="col-12">
             <h2 className="contact-title">Get in Touch</h2>

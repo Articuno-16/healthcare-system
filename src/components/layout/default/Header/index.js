@@ -67,7 +67,7 @@ export default function Header() {
                                         Contact
                                     </Link>
                                 </Nav>
-                                {/* <Button variant="primary">Make an Appoinment</Button> */}
+                                <Button variant="primary"><Link style={textNonUnderline} to='/create'>Make an Appoinment</Link></Button>
                                 <Nav className='px-3 py-2 align-items-center'>
                                     <Button variant="white">
                                         <Link style={textNonUnderline} to="/account">
