@@ -10,9 +10,8 @@ export default function Account() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const url = `http://localhost/api/getUser/?id=${id}`;
-        axios.put(url, info).then((res) => {
-            console.log(res);
-        });
+        axios.put(url, info);
+        alert('Your information has been updated!')
     };
 
     const handleAge = () => {

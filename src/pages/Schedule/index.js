@@ -6,7 +6,6 @@ import Calendar from './Calendar';
 export default function Schedule() {
     const [schedule, setSchedule] = useState([]);
     const [user, setUser] = useState('');
-    var status = 'passed';
     const id = localStorage.getItem('id');
 
     useEffect(() => {
@@ -18,10 +17,6 @@ export default function Schedule() {
             });
     }, [id]);
 
-    const handleSetStatus = () => {
-        status = (status === 'passed') ? 'upcoming' : 'passed';
-    };
-
     return (
         <div className="main-width m-auto py-5">
             <Container>
@@ -29,12 +24,12 @@ export default function Schedule() {
                     <h1 className="py-2">Schedule Management</h1>
                     <h4>Name: {user}</h4>
                 </div>
-                <Tabs defaulactivekey="1" className="mb-3" onSelect={handleSetStatus} >
+                <Tabs defaulactivekey="1" className="mb-3">
                     <Tab eventKey="1" title="Past Schedule">
-                        <Calendar props={schedule.filter((s) => s.state === status)} />
+                        <Calendar props={schedule.filter((s) => s.state === 'passed')} />
                     </Tab>
                     <Tab eventKey="2" title="Upcoming Schedule">
-                        <Calendar props={schedule.filter((s) => s.state === status)} />
+                        <Calendar props={schedule.filter((s) => s.state === 'upcoming')} />
                     </Tab>
                 </Tabs>
             </Container>

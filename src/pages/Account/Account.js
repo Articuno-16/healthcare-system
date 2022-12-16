@@ -15,7 +15,7 @@ export default function AccountManage({props}) {
     const handleChange = props.handleChange
 
     return (
-        <Container className="main-width m-auto py-5">
+        <Container className="m-auto py-5">
             <div className="py-md-3">
                 <div className="row">
                     <h2 className="col-8">Account Manage</h2>

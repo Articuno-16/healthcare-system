@@ -37,38 +37,38 @@ export default function Header() {
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                             <Nav className="align-items-center" navbarScroll>
-                                <Nav className='px-3'>
+                                <Nav className='px-3 py-2'>
                                     <Link style={textNonUnderline} to="/">
                                         Home
                                     </Link>
                                 </Nav>
-                                <Nav className='px-3'>
+                                <Nav className='px-3 py-2'>
                                     <Link style={textNonUnderline} to="/department">
                                         Department
                                     </Link>
                                 </Nav>
-                                <Nav className='px-3'>
+                                <Nav className='px-3 py-2'>
                                     <Link style={textNonUnderline} to="/blog">
                                         Blog
                                     </Link>
                                 </Nav>
-                                <Nav className='px-3'>
+                                <Nav className='px-3 py-2'>
                                     <Link style={textNonUnderline} to="/pages">
                                         Pages
                                     </Link>
                                 </Nav>
-                                <Nav className='px-3'>
+                                <Nav className='px-3 py-2'>
                                     <Link style={textNonUnderline} to="/doctors">
                                         Doctors
                                     </Link>
                                 </Nav>
-                                <Nav className='px-3'>
+                                <Nav className='px-3 py-2'>
                                     <Link style={textNonUnderline} to="/contact">
                                         Contact
                                     </Link>
                                 </Nav>
                                 {/* <Button variant="primary">Make an Appoinment</Button> */}
-                                <Nav className='px-3 align-items-center'>
+                                <Nav className='px-3 py-2 align-items-center'>
                                     <Button variant="white">
                                         <Link style={textNonUnderline} to="/account">
                                             <FaUser></FaUser>
