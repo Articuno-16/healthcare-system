@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
+import logobk from '../../../../assets/images/logobk.png'
 
 import { useState, useEffect } from 'react';
 
@@ -20,62 +21,32 @@ const textNonUnderline = {
 export default function Header() {
     const [user, setUser] = useState();
     useEffect(() => {
-        var user = localStorage.getItem('username');
+        var user = localStorage.getItem('email');
         setUser(user);
     }, []);
 
     const handleLogout = () => {
         localStorage.removeItem('email');
-        localStorage.removeItem('username');
-        localStorage.removeItem('id');
         localStorage.clear();
         window.location.reload();
     };
 
     return (
+        
         <>
             <Navbar bg="light" expand="lg" style={{ boxShadow: '0px 0px 5px 1px lightgray' }}>
                 <Container>
                     <Navbar.Brand>
+                        
                         <Link style={textNonUnderline} to="/">
-                            DOCMED
+                        <img style={{width: "50px", height: "50px"}} src={logobk} alt="logobk"></img>
+                            <strong>STUDENT BK</strong>
                         </Link>
                     </Navbar.Brand>
                     <div className='d-flex flex-column'>
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                             <Nav className="align-items-center" navbarScroll>
-                                <Nav className='px-3 py-2'>
-                                    <Link style={textNonUnderline} to="/">
-                                        Home
-                                    </Link>
-                                </Nav>
-                                <Nav className='px-3 py-2'>
-                                    <Link style={textNonUnderline} to="/department">
-                                        Department
-                                    </Link>
-                                </Nav>
-                                <Nav className='px-3 py-2'>
-                                    <Link style={textNonUnderline} to="/blog">
-                                        Blog
-                                    </Link>
-                                </Nav>
-                                <Nav className='px-3 py-2'>
-                                    <Link style={textNonUnderline} to="/pages">
-                                        Pages
-                                    </Link>
-                                </Nav>
-                                <Nav className='px-3 py-2'>
-                                    <Link style={textNonUnderline} to="/doctors">
-                                        Doctors
-                                    </Link>
-                                </Nav>
-                                <Nav className='px-3 py-2'>
-                                    <Link style={textNonUnderline} to="/contact">
-                                        Contact
-                                    </Link>
-                                </Nav>
-                                <Button variant="primary"><Link style={textNonUnderline} to='/create'>Make an Appoinment</Link></Button>
                                 <Nav className='px-3 py-2 align-items-center'>
                                     <Button variant="white">
                                         <Link style={textNonUnderline} to="/account">

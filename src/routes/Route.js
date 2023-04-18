@@ -1,15 +1,15 @@
 import Home from "../pages/Home"
-import Contact from "../pages/Contact"
-import Department from "../pages/Department"
-import Blog from "../pages/Blog"
 import Login from "../pages/Login"
-import Doctors from "../pages/Doctors"
-import Register from "../pages/Register"
-import Pages from "../pages/Pages"
-import Create from "../pages/Create"
-import Account from "../pages/Account"
-import Schedule from "../pages/Schedule"
-
+import Students from "../pages/Students"
+import StudentDetail from "../pages/StudentDetail"
+import Courses from "../pages/Courses"
+import ClassList from "../pages/ClassList"
+import Members from "../pages/Members"
+import Grades from "../pages/Grades"
+import AddCourse from "../pages/AddCourse"
+import AddStudent from "../pages/AddStudent"
+import AddClass from "../pages/AddClass"
+import AddGrade from "../pages/AddGrade"
 
 export const PulicRoutes = [
     {
@@ -17,55 +17,54 @@ export const PulicRoutes = [
         element: <Home />
     },
     {
-        path: '/contact',
-        element: <Contact />
-    },
-    {
-        path: '/department',
-        element: <Department />
-    },
-    {
-        path: '/blog',
-        element: <Blog/>
-    },
-    {
-        path: '/doctors',
-        element: <Doctors />
-    },
-    {
-        path: '/pages',
-        element: <Pages />
-    },
-    {
         path: '/login',
         element: <Login />
     },
     {
-        path: '/register',
-        element: <Register />
+        path: '/students',
+        element: <Students />
     },
     {
-        path: '/account',
-        element: <Account />
+        path: '/students/detail',
+        element: <StudentDetail />
     },
     {
-        path: '/schedule',
-        element: <Schedule />
+        path: '/courses',
+        element: <Courses />
     },
     {
-        path: '/create',
-        element: <Create />
+        path: '/courses/classlist',
+        element: <ClassList />
+    },
+    {
+        path: '/courses/classlist/members',
+        element: <Members />
+    },
+    
+    {
+        path: '/courses/classlist/members/grades',
+        element: <Grades />
+    },
+    {
+        path: '/courses/addcourse',
+        element: <AddCourse />
+    },
+    {
+        path: '/students/addstudent',
+        element: <AddStudent />
+    },
+    {
+        path: '/courses/classlist/addclass',
+        element: <AddClass />
+    },
+    {
+        path: '/courses/classlist/members/grade',
+        element: <AddGrade />
     }
-]
 
+
+]
 export const PrivateRoutes = [
     // for private function
-    {
-        path: '/account',
-        element: <Account />
-    },
-    {
-        path: '/schedule',
-        element: <Schedule />
-    }
+    
 ]

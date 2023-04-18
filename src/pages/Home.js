@@ -1,173 +1,45 @@
-//images
-import banner2 from '../assets/images/banner2.png';
+import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import student from "../assets/images/students.png"
+import course from "../assets/images/courses.png"
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-import banner from '../assets/images/banner.png';
-import testmonial1 from '../assets/images/testmonial1.png';
-import testmonial2 from '../assets/images/testmonial2.png';
-
-
-//bootrap
-import { Carousel, Tab, Tabs } from 'react-bootstrap';
-// component
-import HomeSlick from '../components/section/homeSlickSlider';
-
-import BusinessTab from '../components/layout/BusinessTab';
-// css
-import '../CSS/home.css'
-// icons
-
-import {FaQuoteLeft} from 'react-icons/fa';
-import {FaQuoteRight} from 'react-icons/fa';
-import Welcome from './Welcome';
-import AreaDepartments from './Areas/AreaDepartments';
-import AreaServices from './Areas/AreaServices';
-import AreaEmergency from './Areas/AreaEmergency';
 const Home = () => {
+   let navigate = useNavigate();
+   const [user, setUser] = useState();
+   useEffect(() => {
+    var user = window.localStorage.getItem("email");
+    setUser(user);
+   }, []);
     return (
-        <div className="home">
-          <div className='item-center'>
-        <Carousel>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={banner2}
-          alt="First slide"
-        />
-        <Carousel.Caption style={{textAlign: 'left', color: 'black'}}>
-          <h1>Health Care</h1>
-          <h3>For Hole Family</h3>
-          <p className='w-50'>In healthcare sector, service excellence is the facility of the hospital as healthcare service provider to consistently.
-           </p>
-           <a href="/serviecs" className="btn btn-primary">Check Our Services</a>
-         
-        </Carousel.Caption>
-       
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={banner}
-          alt="Second slide"
-        />
-
-       <Carousel.Caption style={{textAlign: 'left', color: 'black'}}>
-          <h1>Health Care</h1>
-          <h3>For Hole Family</h3>
-          <p className='w-50'>In healthcare sector, service excellence is the facility of the hospital as healthcare service provider to consistently.
-           </p>
-           <a href="/serviecs" className="btn btn-primary">Check Our Services</a>
-         
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={banner2}
-          alt="Third slide"
-        />
-
-       <Carousel.Caption style={{textAlign: 'left', color: 'black'}}>
-          <h1>Health Care</h1>
-          <h3>For Hole Family</h3>
-          <p className='w-50'>In healthcare sector, service excellence is the facility of the hospital as healthcare service provider to consistently.
-           </p>
-           <a href="/serviecs" className="btn btn-primary">Check Our Services</a>
-         
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-    </div>
-    <AreaServices />
-    <Welcome />
-    <AreaDepartments />
-    <div className='testmonial'>
-    <Carousel>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={testmonial1}
-          alt="First slide"
-        />
-        <Carousel.Caption style={{textAlign: 'center', color: 'white', top: '50%'}}>
-          
-
-          <p><FaQuoteLeft></FaQuoteLeft> Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br />
-         
-            sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.<br />
-            
-            Fusce ac mattis nulla. Morbi eget ornare dui. <FaQuoteRight></FaQuoteRight>
-           </p>
-          
-          <h3 className='author' style={{fontSize: '15px'}}>-ASANA KORIM-</h3>
       
-         
-        </Carousel.Caption>
-       
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" src={testmonial2} alt="Second slide" />
-
-<Carousel.Caption style={{textAlign: 'center', color: 'white', top: '50%'}}>
-          
-
-          <p><FaQuoteLeft></FaQuoteLeft> Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br />
-         
-            sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.<br />
-            
-            Fusce ac mattis nulla. Morbi eget ornare dui. <FaQuoteRight></FaQuoteRight>
-           </p>
-          
-          <h3 className='author' style={{fontSize: '15px'}}>-ASANA KORIM-</h3>
-      
-         
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={testmonial1}
-          alt="Third slide"
-        />
-
-<Carousel.Caption style={{textAlign: 'center', color: 'white', top: '50%'}}>
-          
-
-          <p><FaQuoteLeft></FaQuoteLeft> Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br />
-         
-            sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.<br />
-            
-            Fusce ac mattis nulla. Morbi eget ornare dui. <FaQuoteRight></FaQuoteRight>
-           </p>
-          
-          <h3 className='author' style={{fontSize: '15px'}}>-ASANA KORIM-</h3>
-      
-         
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-    </div>
-    <div className='business-expert-area'>
-    <Tabs style={{background: '#F5FBFF', height: '60px'}}
-      defaultActiveKey="profile"
-      id="uncontrolled-tab-example"
-      className="mb-3"
-    >
-      <Tab eventKey="ExcellentServices" title="Excellent Services">
-        <BusinessTab />
-      </Tab>
-      <Tab eventKey="QualifiedDoctors" title="Qualified Doctors">
-        <BusinessTab />
-      </Tab>
-      <Tab eventKey="dEmergencyDepartments" title="Emergency Departments">
-        <BusinessTab />
-      </Tab>
-    </Tabs>
-    </div>
-    <div className='experts-area'>
-    <HomeSlick />
-    </div>
-    <AreaEmergency />
-    </div>
+        <Container>
+          {!user && navigate(`/login`)}
+        <Row style={{textAlign: "center"}}>
+          <strong>WELCOME TO STUDENT BK MANAGEMENT!!!</strong>
+        </Row>
+        <Row style={{margin: "50px auto"}}>
+        <Col md="6">
+        <Card style={{ width: '18rem', margin: "0px auto" }}>
+      <Card.Img variant="top" src={student} />
+      <Card.Body style={{textAlign: "center"}}>
+        <Button variant="primary"><Link to="/students" style={{color: "white", textDecorationLine: "none"}}>Manage students</Link></Button>
+      </Card.Body>
+    </Card>
+    </Col>
+          <Col md="6" style={{margin: "0px auto"}}>
+          <Card style={{ width: '18rem', margin: "0px auto"}}>
+      <Card.Img variant="top" src={course} />
+      <Card.Body style={{textAlign: "center"}}>
+        <Button variant="primary"><Link to="/courses" style={{color: "white", textDecorationLine: "none"}}>Manage courses</Link></Button>
+      </Card.Body>
+      </Card>
+          </Col>
+        </Row>
+      </Container>
     );
 }
 export default Home
